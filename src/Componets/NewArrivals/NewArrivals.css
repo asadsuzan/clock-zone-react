@@ -1,0 +1,20 @@
+.new-ariva-thumb{
+    overflow: hidden;
+   
+}
+.new-ariva-thumb:hover .n-img{
+transform: scale(1.1);
+transition: all .5s ease-in-out;
+}
+.new-ariva-name{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var( --secondary_heading_color);
+    padding:5px 0 ;
+    margin: 0;
+}
+.new-arival-info  span{
+    color: var(--highlight_color);
+    font-size: 1.5rem;
+    font-weight: 500;
+}
