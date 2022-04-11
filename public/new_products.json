@@ -1,0 +1,20 @@
+[
+    {
+        "id":1,
+        "name":"Thermo Ball Etip Gloves-A",
+        "price":443,
+        "img":"https://i.ibb.co/xgWPBJv/new-product1.png"
+    },
+    {
+        "id":2,
+        "name":"Thermo Ball Etip Gloves-B",
+        "price":334,
+        "img":"https://i.ibb.co/KyFJDQh/new-product2.png"
+    },
+    {
+        "id":3,
+        "name":"Thermo Ball Etip Gloves-C",
+        "price":567,
+        "img":"https://i.ibb.co/rfk6G0q/new-product3.png"
+    }
+]
