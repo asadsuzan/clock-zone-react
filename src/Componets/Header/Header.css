@@ -1,3 +1,35 @@
-h1{
-    color: var(--primary_btn_color);
+.header{
+    height: 80px;
 }
+.h-brand{
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    gap: 10px;
+}
+.h-brand :nth-child(1){
+    color:var(--primary_heading_color);
+}
+.h-brand :nth-child(2){
+    color:var( --highlight_color);
+}
+.h-nav{
+    flex: 1;
+    gap: 50px;
+}
+.h-nav a{
+    text-decoration: none;
+    color: var(--primary_heading_color);
+    font-size: 17px;
+    font-weight:600;
+    text-transform: uppercase;
+}
+.h-nav a:hover{
+    color: var(--highlight_color);
+}
+.h-actions-btn{
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: .8;
+}   
