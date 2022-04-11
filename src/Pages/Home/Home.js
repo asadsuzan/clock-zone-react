@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Gellery from "../../Componets/Gellery/Gellery";
 import NewArrivals from "../../Componets/NewArrivals/NewArrivals";
 import Slider from "../../Componets/Slider/Slider";
 import "./Home.css";
@@ -22,6 +23,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <Gellery />
     </section>
   );
 };
