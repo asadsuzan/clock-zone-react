@@ -5,7 +5,7 @@ import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 
 const Header = () => {
   return (
-    <header className="header bg-light d-flex px-3 shadow-sm align-items-center justify-content-center">
+    <header className="header  d-flex px-3 shadow-sm align-items-center justify-content-center">
       <div className="h-brand text-uppercase">
         <span>clock</span>
         <span>zone</span>

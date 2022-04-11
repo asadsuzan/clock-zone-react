@@ -1,0 +1,31 @@
+.button button{
+    border: none;
+    cursor: pointer;
+    background-color: darkslategray;
+    width: 150px;
+    color: white;
+    padding: 10px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    
+}
+.button button::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary_btn_color);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    transform: translateX(-100%);
+   z-index: -1;
+    transition: .5s linear;
+}
+.button button:hover:after{
+    transform: translateX(0);
+}
