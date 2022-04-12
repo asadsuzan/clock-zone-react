@@ -15,6 +15,7 @@ const Home = () => {
   const [newArrivals, setNewArrivals] = useState([]);
   const [products] = useProducts();
   const navigate = useNavigate();
+
   useEffect(() => {
     fetch("new_products.json")
       .then((res) => res.json())
@@ -22,7 +23,7 @@ const Home = () => {
   }, []);
 
   return (
-    <section className="home">
+    <section className="home my-5 pt-4">
       <Slider />
       <div className="container new-arival-container my-5">
         <h1 className="n-title">New Arrivals</h1>

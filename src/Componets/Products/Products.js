@@ -1,8 +1,8 @@
-import React from "react";
 import "./Products.css";
 
 const Products = ({ product }) => {
   const { img, name, price } = product;
+
   return (
     <div className="col-lg-4 col-md-4 col-sm-6 col-12">
       <div className="product ">

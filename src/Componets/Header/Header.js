@@ -5,6 +5,7 @@ import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
 
 const Header = () => {
   const [shadow, setShadow] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", function () {
       if (this.window.scrollY > 100) {
@@ -31,9 +32,11 @@ const Header = () => {
         <Link to={"/blog"}>blog</Link>
         <Link to={"/contact"}>contact</Link>
       </nav>
-      <div className="h-actions-btn d-flex">
+      <div className="h-actions-btn d-flex align-items-center">
         <AiOutlineUser />
-        <AiOutlineShoppingCart />
+        <Link to={"/cart"}>
+          <AiOutlineShoppingCart />
+        </Link>
       </div>
     </header>
   );
