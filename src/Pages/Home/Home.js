@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Button from "../../Componets/Button/Button";
+import FeaturesPd from "../../Componets/FeaturesPd/FeaturesPd";
 import Gellery from "../../Componets/Gellery/Gellery";
 import NewArrivals from "../../Componets/NewArrivals/NewArrivals";
 import Products from "../../Componets/Products/Products";
 import Slider from "../../Componets/Slider/Slider";
 import useProducts from "../../hooks/useProducts";
+import feature1 from "../../assets/features_img/feature1.png";
+import feature2 from "../../assets/features_img/feature2.png";
 import "./Home.css";
 
 const Home = () => {
   const [newArrivals, setNewArrivals] = useState([]);
   const [products] = useProducts();
+  const navigate = useNavigate();
   useEffect(() => {
     fetch("new_products.json")
       .then((res) => res.json())
@@ -41,6 +47,16 @@ const Home = () => {
             <Products key={product.id} product={product} />
           ))}
         </div>
+        <div className="text-center">
+          <Button
+            text={"view more products"}
+            action={() => navigate("/shop")}
+          />
+        </div>
+      </div>
+      <div className="features-produsts container">
+        <FeaturesPd fimg={feature1} />
+        <FeaturesPd fimg={feature2} dicrection="row-reverse" />
       </div>
     </section>
   );
