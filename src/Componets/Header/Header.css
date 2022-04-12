@@ -1,5 +1,9 @@
 .header{
     height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
 }
 .h-brand{
     font-size: 1.5rem;

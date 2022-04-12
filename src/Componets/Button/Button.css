@@ -1,7 +1,7 @@
 .button button{
     border: none;
     cursor: pointer;
-    background-color: darkslategray;
+    background-color: var(--primary_heading_color);
     /* width: 150px; */
     color: white;
     padding: 10px;
