@@ -1,0 +1,41 @@
+.gellery{
+    margin: 6rem 0 !important;
+}
+.gellery img{
+    width: 100%;
+    height: 100%;  
+    transition: all .5s linear; 
+}
+.gellery img:hover{
+    transform: scale(1.05);
+}
+.g-wraper{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-gap: 20px;
+    overflow: hidden;
+}
+.g-right{
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    grid-gap: 20px;
+    overflow: hidden;
+}
+.g-left{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    overflow: hidden;
+}
+@media screen and (max-width:768px) {
+    .g-wraper{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .g-right{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .g-left{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
