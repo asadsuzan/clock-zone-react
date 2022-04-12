@@ -1,0 +1,18 @@
+.polices-wraper{
+    background-color: red;
+    color: white;  
+    padding: 1rem 20px;
+}
+
+.polices div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.polices div svg{
+    font-size: 2.3rem;
+}
+.polices div p{
+    font-size: 18px;
+    color: rgb(209, 196, 196);
+}
