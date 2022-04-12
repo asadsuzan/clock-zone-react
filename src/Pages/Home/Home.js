@@ -28,13 +28,15 @@ const Home = () => {
       </div>
       <Gellery />
       <div className="products-wraper container">
-        <h2>Popular Items</h2>
-        <p>
-          Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
-          gravida.
-        </p>
-        <div className="row g-5">
+        <div className="text-center my-5">
+          <h2 className="title">Popular Items</h2>
+          <p className="lead w-75 mx-auto">
+            Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices
+            gravida.
+          </p>
+        </div>
+        <div className="row gx-3 gy-5 my-5">
           {products.map((product) => (
             <Products key={product.id} product={product} />
           ))}

@@ -1,0 +1,34 @@
+.p-img{
+    border-bottom: 3px solid red;
+    position: relative;
+    overflow: hidden;
+}
+.p-img:hover .add-cart-btn{
+    transform: translateY(0);
+}
+.add-cart-btn{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50px;
+    width:100%;
+    transform: translateY(100%);
+    transition: all .3s linear;
+}
+.add-cart-btn button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: var(--primary_btn_color);
+    color: white;
+}
+.p-name{
+    color: var(--secondary_heading_color);
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.p-price{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--highlight_color);
+}

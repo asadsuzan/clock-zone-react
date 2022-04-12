@@ -3,3 +3,8 @@
     font-weight: bold;
     font-size: 3rem;
 }
+.products-wraper .title{
+    color: var(--primary_heading_color);
+    font-weight: bold;
+    font-size: 3rem;
+}
