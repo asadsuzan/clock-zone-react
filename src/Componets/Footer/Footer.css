@@ -16,3 +16,28 @@
     font-size: 18px;
     color: rgb(209, 196, 196);
 }
+.f-links{
+    gap: 10px;
+}
+.f-links a{
+    text-transform: capitalize;
+    color: var(--secondary_heading_color);
+    transition: all .4s;
+}
+.f-links a:hover{
+    color: var(--highlight_color);
+    transform: translateX(5px);
+}
+.social-links{
+    gap: 15px;
+}
+.social-links a{
+    color: var(--secondary_heading_color);
+    font-size: 2rem;
+    display: block;
+    transition: all .4s;
+}
+.social-links a:hover{
+    color: var(--highlight_color);
+    
+}
