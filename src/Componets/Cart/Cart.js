@@ -1,3 +1,4 @@
+import { removeFromDb } from "../../fackDb/fackDb";
 import useCart from "../../hooks/useCart";
 import useProducts from "../../hooks/useProducts";
 import Banner from "../Banner/Banner";
@@ -6,7 +7,12 @@ import "./Cart.css";
 
 const Cart = () => {
   const [products] = useProducts();
-  const [cart] = useCart(products);
+  const [cart, setCart] = useCart(products);
+  const removeItem = (id) => {
+    const exitsItems = cart.filter((pd) => pd.id != id);
+    setCart(exitsItems);
+    removeFromDb(id);
+  };
 
   return (
     <div className="container">
@@ -23,7 +29,11 @@ const Cart = () => {
         <div className="items my-5">
           <div className="row m-0 align-items-center">
             {cart.map((item) => (
-              <CartItems key={item.id} item={item}></CartItems>
+              <CartItems
+                key={item.id}
+                removeItem={removeItem}
+                item={item}
+              ></CartItems>
             ))}
           </div>
         </div>

@@ -1,7 +1,10 @@
 import React from "react";
+import { BsTrash } from "react-icons/bs";
+import { removeFromDb } from "../../fackDb/fackDb";
 
-const CartItems = ({ item }) => {
+const CartItems = ({ item, removeItem }) => {
   const { img, name, price, quantity } = item;
+
   return (
     <>
       <div className="col-lg-6 col-md-6 col-sm-6 col-6">
@@ -16,6 +19,12 @@ const CartItems = ({ item }) => {
       <div className="col-lg-2 col-md-2 col-sm-2 col-2">{quantity}</div>
       <div className="col-lg-2 col-md-2 col-sm-2 col-2">
         $ {price * quantity}
+        <button
+          onClick={() => removeItem(item.id)}
+          className="m-3 border-0 text-danger"
+        >
+          <BsTrash />
+        </button>
       </div>
       <hr />
     </>
