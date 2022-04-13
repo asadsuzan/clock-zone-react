@@ -1,6 +1,6 @@
 import "./Products.css";
 
-const Products = ({ product }) => {
+const Products = ({ product, handleAddCart }) => {
   const { img, name, price } = product;
 
   return (
@@ -9,7 +9,7 @@ const Products = ({ product }) => {
         <div className="p-img">
           <img src={img} alt="" className="img-fluid w-100" />
           <div className="add-cart-btn">
-            <button>Add to cart</button>
+            <button onClick={() => handleAddCart(product)}>Add to cart</button>
           </div>
         </div>
         <div className="p-info text-center my-2">

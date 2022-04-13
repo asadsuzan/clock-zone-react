@@ -14,6 +14,8 @@ import "./Home.css";
 const Home = () => {
   const [newArrivals, setNewArrivals] = useState([]);
   const [products] = useProducts();
+  const [cart, setCart] = useState([]);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,6 +23,25 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => setNewArrivals(data));
   }, []);
+  const handleAddCart = (selectedProduct) => {
+    let newCart = [];
+    const exitsProducts = cart.find(
+      (cartItem) => cartItem.id === selectedProduct.id
+    );
+    if (!exitsProducts) {
+      selectedProduct.quantity = 1;
+      newCart = [...cart, selectedProduct];
+    } else {
+      const remainingProducts = cart.filter(
+        (cartItem) => cartItem.id !== selectedProduct.id
+      );
+      const quantity = selectedProduct.quantity;
+      selectedProduct.quantity = quantity + 1;
+      newCart = [...remainingProducts, selectedProduct];
+    }
+    setCart(newCart);
+  };
+  console.log(cart);
 
   return (
     <section className="home my-5 pt-4">
@@ -45,7 +66,11 @@ const Home = () => {
         </div>
         <div className="row gx-3 gy-5 my-5">
           {products.map((product) => (
-            <Products key={product.id} product={product} />
+            <Products
+              key={product.id}
+              product={product}
+              handleAddCart={handleAddCart}
+            />
           ))}
         </div>
         <div className="text-center">
