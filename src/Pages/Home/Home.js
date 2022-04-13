@@ -6,15 +6,17 @@ import Gellery from "../../Componets/Gellery/Gellery";
 import NewArrivals from "../../Componets/NewArrivals/NewArrivals";
 import Products from "../../Componets/Products/Products";
 import Slider from "../../Componets/Slider/Slider";
-import useProducts from "../../hooks/useProducts";
+
 import feature1 from "../../assets/features_img/feature1.png";
 import feature2 from "../../assets/features_img/feature2.png";
 import "./Home.css";
-
+import { addToDb } from "../../fackDb/fackDb";
+import usePrpducts from "../../hooks/useProducts";
+import useCart from "../../hooks/useCart";
 const Home = () => {
   const [newArrivals, setNewArrivals] = useState([]);
-  const [products] = useProducts();
-  const [cart, setCart] = useState([]);
+  const [products] = usePrpducts();
+  const [cart, setCart] = useCart(products);
 
   const navigate = useNavigate();
 
@@ -39,12 +41,13 @@ const Home = () => {
       selectedProduct.quantity = quantity + 1;
       newCart = [...remainingProducts, selectedProduct];
     }
+    addToDb(selectedProduct.id);
     setCart(newCart);
   };
-  console.log(cart);
 
   return (
     <section className="home my-5 pt-4">
+      <h1>{cart.length}</h1>
       <Slider />
       <div className="container new-arival-container my-5">
         <h1 className="n-title">New Arrivals</h1>
