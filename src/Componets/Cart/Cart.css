@@ -1,5 +1,17 @@
-.cart-page{
-    margin: 5rem 0;
-    z-index: -1 !important;
-    height: 600px;
+.cart-items-wraper{
+    background-color: aliceblue;
+    height: 700px;
+    width: 100%;
+    margin: 10rem auto;
+   
+    overflow-y: scroll;
+}
+
+
+@media screen and (max-width:768px) {
+    .cart-header{
+       
+        font-size: 10px;
+    }
+    
 }

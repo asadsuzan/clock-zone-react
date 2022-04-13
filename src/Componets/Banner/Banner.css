@@ -1,0 +1,13 @@
+.banner-wraper{
+    background-image: url(../../assets/banner/banner2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:  center;
+    height: 300px;
+    margin: 6rem 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}

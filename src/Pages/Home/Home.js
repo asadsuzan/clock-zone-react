@@ -47,7 +47,6 @@ const Home = () => {
 
   return (
     <section className="home my-5 pt-4">
-      <h1>{cart.length}</h1>
       <Slider />
       <div className="container new-arival-container my-5">
         <h1 className="n-title">New Arrivals</h1>
