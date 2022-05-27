@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../../Componets/Button/Button";
 import FeaturesPd from "../../Componets/FeaturesPd/FeaturesPd";
@@ -13,11 +13,16 @@ import "./Home.css";
 import { addToDb } from "../../fackDb/fackDb";
 import usePrpducts from "../../hooks/useProducts";
 import useCart from "../../hooks/useCart";
+import { cartQuantuty } from "../../App";
+import { toast } from "react-toastify";
 const Home = () => {
   const [newArrivals, setNewArrivals] = useState([]);
   const [products] = usePrpducts();
   const [cart, setCart] = useCart(products);
+  //  test
 
+  const { totalCartItems, setTotalCartItems } = useContext(cartQuantuty);
+  //  test
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -41,8 +46,16 @@ const Home = () => {
       selectedProduct.quantity = quantity + 1;
       newCart = [...remainingProducts, selectedProduct];
     }
+
     addToDb(selectedProduct.id);
     setCart(newCart);
+    // set cart number
+    setTotalCartItems(totalCartItems + 1);
+    localStorage.setItem("cartNo", JSON.stringify(totalCartItems));
+    toast("Item Added", {
+      position: toast.POSITION.TOP_RIGHT,
+      className: "foo-bar",
+    });
   };
 
   return (
@@ -66,7 +79,7 @@ const Home = () => {
             gravida.
           </p>
         </div>
-        <div className="row gx-3 gy-5 my-5">
+        <div className="row gx-3 gy-5 my-5" id="pd">
           {products.map((product) => (
             <Products
               key={product.id}

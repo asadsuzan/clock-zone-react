@@ -13,3 +13,7 @@ code{
     font-size: 50px;
     color: var(--secondary_heading_color);
 }
+.foo-bar{
+    background-color: purple !important;
+    color: white !important;
+}

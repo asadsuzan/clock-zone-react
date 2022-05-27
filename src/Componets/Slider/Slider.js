@@ -5,7 +5,7 @@ import "./Slider.css";
 
 const Slider = () => {
   return (
-    <div className="slider">
+    <div className="slider" id="slider">
       <div className="container">
         <div className="row s-wraper">
           <div className="s-left col-lg-7 col-md-7 col-sm-7 d-flex flex-column justify-content-center">
@@ -14,7 +14,10 @@ const Slider = () => {
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat is aute irure.
             </p>
-            <Button text={"Shop now"}></Button>
+            <a href="#pd">
+              {" "}
+              <Button text={"Shop now"}></Button>
+            </a>
           </div>
           <div className="s-right text-center col-lg-5 col-md-5 col-sm-5">
             <img className="img-fluid" src={banner} alt="banner thumb" />

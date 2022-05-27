@@ -1,6 +1,6 @@
 import React from "react";
 import { BsTrash } from "react-icons/bs";
-import { removeFromDb } from "../../fackDb/fackDb";
+import useCart from "../../hooks/useCart";
 
 const CartItems = ({ item, removeItem }) => {
   const { img, name, price, quantity } = item;

@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 import { removeFromDb } from "../../fackDb/fackDb";
 import useCart from "../../hooks/useCart";
 import useProducts from "../../hooks/useProducts";
@@ -12,11 +13,15 @@ const Cart = () => {
     const exitsItems = cart.filter((pd) => pd.id != id);
     setCart(exitsItems);
     removeFromDb(id);
+    toast.warn("Item Dleted", {
+      position: toast.POSITION.TOP_RIGHT,
+      className: "foo-bar",
+    });
   };
 
   return (
     <div className="container">
-      {/* <Banner text={"CART"} /> */}
+      <Banner text={"CART"} />
       <div className="cart-items-wraper ">
         <div className="cart-header">
           <div className="row m-0 text-uppercase py-5 shadow-sm ">

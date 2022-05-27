@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import { AiOutlineUser, AiOutlineShoppingCart } from "react-icons/ai";
+import { cartQuantuty } from "../../App";
 
 const Header = () => {
   const [shadow, setShadow] = useState(false);
+  const { totalCartItems } = useContext(cartQuantuty);
 
   useEffect(() => {
     window.addEventListener("scroll", function () {
@@ -33,9 +35,13 @@ const Header = () => {
         <Link to={"/contact"}>contact</Link>
       </nav>
       <div className="h-actions-btn d-flex align-items-center">
-        <AiOutlineUser />
+        <Link to={"/user"}>
+          {" "}
+          <AiOutlineUser />
+        </Link>
         <Link to={"/cart"}>
           <AiOutlineShoppingCart />
+          <sup>{totalCartItems}</sup>
         </Link>
       </div>
     </header>
