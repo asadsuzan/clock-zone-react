@@ -12,6 +12,7 @@ import Contact from "./Pages/Contact/Contact";
 import User from "./Pages/User";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ScroolTop from "./Componets/ScroolTop";
 export const cartQuantuty = createContext();
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <>
+      <ScroolTop/>
       <cartQuantuty.Provider value={{ totalCartItems, setTotalCartItems }}>
         <Header />
         <Routes>
