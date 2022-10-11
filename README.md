@@ -16,21 +16,29 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### `New Arrivals section`
 
-Its show the latest 3 new item from newproduct.json file wich is in publice directory
+Its show the latest 3 new item from new-product.json file which is in public directory
 
-### `Gelery section`
+### `Gallery section`
 
-Its a 3 column based photo gelery section wich contain 4 best product photo
+Its a 3 column based photo gallery section which contain 4 best product photo
 
 ### `Popular Items section`
 
-Its a 3 column based product gelery. its contain latest 6 product from allproducts.json file.each product have an image,name and price. Also have a Add Cart Button.by clicking on it,the selected item is add on cart page. here is a link button on bottom of the section wich take to shop page
+Its a 3 column based product gallery. its contain latest 6 product from all-products.json file.each product have an image,name and price. Also have a Add Cart Button.by clicking on it,the selected item is add on cart page. here is a link button on bottom of the section which take to shop page
 
 # `Shop Page`
 
-Its a 3 column based product gelery. its contain all the product that allproduct.json file have .each product have an image,name and price. Also have a Add Cart Button.by clicking on it,the selected item is add on cart page.
+Its a 3 column based product gallery. its contain all the product that all-product.json file have .each product have an image,name and price. Also have a Add Cart Button.by clicking on it,the selected item is add on cart page.
 
 # `Cart Page`
 
-this a table based component. wich contains all the item ,user have added on cart .its display product image,name,total quantity and total price.
-user can remove specifice item and aslo can clear all added item at a time
+this a table based component. which contains all the item ,user have added on cart .its display product image,name,total quantity and total price.
+user can remove specific item and also can clear all added item at a time
+
+#### `Ask Suzan for More Details`
+
+Email: asadsuzan7@gmail.com
+
+Linkedin: [asadsuzan](https://www.linkedin.com/in/asadsuzan/)
+
+Whatsapp: [+88 01614010594](https://wa.me/message/46YDVA5OUV5RC1)
